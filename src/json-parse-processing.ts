@@ -9,7 +9,7 @@ import {
 
 export class JSONParseProcessing {
 	private tState: TokenStates;
-	private key: string | number | undefined;
+	key: string | number | undefined;
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	private value: any;
 	private string: string | undefined;
@@ -576,8 +576,10 @@ export class JSONParseProcessing {
 			if (this.mode === ParserMode.ARRAY) {
 				this.key = (this.key as number) + 1;
 				this.state = ParserStates.VALUE;
+				return;
 			} else if (this.mode === ParserMode.OBJECT) {
 				this.state = ParserStates.KEY;
+				return;
 			}
 		} else if (
 			/**
@@ -587,6 +589,7 @@ export class JSONParseProcessing {
 			(token === ParserToken.RIGHT_BRACKET && this.mode === ParserMode.ARRAY)
 		) {
 			this.popFromStack();
+			return;
 		}
 		return this.jsonParsingError(token, value);
 	}
