@@ -9,6 +9,10 @@
     "dev": "nodemon src/index.ts",
     "test": "npm run build && mocha 'test/**/*.test.js'"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaywcjlove/mocker-api.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
