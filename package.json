@@ -2,7 +2,8 @@
   "name": "json-data-stream-parser",
   "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "watch": "mocha -r ts-node/register 'test/**/*.ts' 'src/**/*.ts' -w --watch-extensions ts",
     "build": "tsc",
@@ -11,6 +12,9 @@
     "dev": "nodemon src/index.ts",
     "test": "npm run build && mocha 'test/**/*.test.js'"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kevalthakarar/json-data-stream-parser"
