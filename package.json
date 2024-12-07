@@ -19,8 +19,14 @@
     "type": "git",
     "url": "git+https://github.com/kevalthakarar/json-data-stream-parser"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "json",
+    "parser",
+    "stream",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "Keval Thakarar",
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.13.0",
