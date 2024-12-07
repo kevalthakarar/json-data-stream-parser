@@ -6,6 +6,8 @@
   "scripts": {
     "watch": "mocha -r ts-node/register 'test/**/*.ts' 'src/**/*.ts' -w --watch-extensions ts",
     "build": "tsc",
+    "eslint": "eslint",
+    "lint": "eslint --fix .",
     "dev": "nodemon src/index.ts",
     "test": "npm run build && mocha 'test/**/*.test.js'"
   },
